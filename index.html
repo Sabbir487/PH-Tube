@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PH-Tube</title>
+    <!-- Daisy & Tailwind CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- CSS-Style -->
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+
+<body class="inter-font">
+    <header>
+        <nav class="w-11/12 mx-auto py-2 md:py-3 flex justify-between items-center border-b">
+            <div class="logo w-24 md:w-40">
+                <img class="w-full" src="assets/Logo.png" alt="">
+            </div>
+            <div class="search">
+                <label class="input input-bordered flex items-center gap-2 w-36 h-6 md:w-96 md:h-14">
+                    <input id="input-field" type="text" class="grow placeholder:text-xs md:placeholder:text-lg"
+                        placeholder="Search" />
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor"
+                        class="h-4 w-4 md:w-6 md:h-6 opacity-70">
+                        <path fill-rule="evenodd"
+                            d="M9.965 11.026a5 5 0 1 1 1.06-1.06l2.755 2.754a.75.75 0 1 1-1.06 1.06l-2.755-2.754ZM10.5 7a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Z"
+                            clip-rule="evenodd" />
+                    </svg>
+                </label>
+            </div>
+            <div>
+                <button class="btn btn-sm md:btn-xl active font-medium md:font-bold md:text-lg">SORT</button>
+            </div>
+        </nav>
+        <nav id="btnContainer" class="py-4 md:py-8 lg:py-12 flex justify-center gap-4 md:gap-8"></nav>
+    </header>
+    <main>
+        <section id="videoContainer" class="w-11/12 mx-auto gap-5 mb-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
+
+        </section>
+        <section>
+            <!-- Open the modal using ID.showModal() method -->
+            <button id="modalData" class="btn hidden" onclick="loadModal.showModal()">open modal</button>
+            <dialog id="loadModal" class="modal modal-bottom sm:modal-middle">
+                <div class="modal-box">
+                    <div id="showModalData">
+
+                    </div>
+                    <div class="modal-action">
+                        <form method="dialog">
+                            <!-- if there is a button in form, it will close the modal -->
+                            <button class="btn active">Close</button>
+                        </form>
+                    </div>
+                </div>
+            </dialog>
+        </section>
+    </main>
+    <footer id="foot" class="active">
+        <p class="md:py-10 py-5 text-xs md:text-base text-center">Copyright © 2024 - All right reserved By <ins>R
+                S T
+                Sabbir</ins>
+        </p>
+    </footer>
+
+
+    <!-- JS Script File -->
+    <script src="script/index.js"></script>
+</body>
+
+</html>
